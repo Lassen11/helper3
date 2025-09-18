@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Дизайн-система для юридической компании - профессиональная палитра
+Все цвета в формате HSL для юридической тематики
+*/
+
+@layer base {
+  :root {
+    --background: 220 20% 98%;
+    --foreground: 220 20% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 10%;
+
+    --primary: 220 90% 25%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 220 90% 20%;
+    --primary-light: 220 60% 95%;
+
+    --secondary: 220 20% 95%;
+    --secondary-foreground: 220 20% 25%;
+
+    --muted: 220 15% 96%;
+    --muted-foreground: 220 10% 50%;
+
+    --accent: 220 80% 55%;
+    --accent-foreground: 0 0% 100%;
+    --accent-light: 220 60% 97%;
+
+    --success: 140 70% 45%;
+    --success-foreground: 0 0% 100%;
+    --success-light: 140 40% 95%;
+
+    --warning: 45 90% 60%;
+    --warning-foreground: 45 30% 10%;
+    --warning-light: 45 60% 95%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 20% 90%;
+    --input: 220 20% 95%;
+    --ring: 220 90% 25%;
+
+    --radius: 0.75rem;
+    
+    /* Градиенты и эффекты */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-hover)));
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--accent-light)));
+    --shadow-elegant: 0 4px 20px -4px hsl(var(--primary) / 0.1);
+    --shadow-card: 0 2px 10px -2px hsl(var(--border) / 0.8);
+  }
+
+  .dark {
+    --background: 220 25% 6%;
+    --foreground: 220 10% 95%;
+
+    --card: 220 20% 8%;
+    --card-foreground: 220 10% 95%;
+
+    --popover: 220 20% 8%;
+    --popover-foreground: 220 10% 95%;
+
+    --primary: 220 80% 65%;
+    --primary-foreground: 220 25% 6%;
+    --primary-hover: 220 80% 55%;
+    --primary-light: 220 60% 10%;
+
+    --secondary: 220 15% 12%;
+    --secondary-foreground: 220 10% 85%;
+
+    --muted: 220 15% 10%;
+    --muted-foreground: 220 8% 60%;
+
+    --accent: 220 70% 60%;
+    --accent-foreground: 220 25% 6%;
+    --accent-light: 220 40% 12%;
+
+    --success: 140 60% 50%;
+    --success-foreground: 140 25% 6%;
+    --success-light: 140 30% 10%;
+
+    --warning: 45 80% 65%;
+    --warning-foreground: 45 25% 6%;
+    --warning-light: 45 40% 12%;
+
+    --destructive: 0 60% 55%;
+    --destructive-foreground: 0 25% 6%;
+
+    --border: 220 15% 15%;
+    --input: 220 15% 12%;
+    --ring: 220 80% 65%;
+    --radius: 0.75rem;
+    
+    /* Градиенты для темной темы */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-hover)));
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--accent-light)));
+    --shadow-elegant: 0 4px 20px -4px hsl(var(--primary) / 0.2);
+    --shadow-card: 0 2px 10px -2px hsl(var(--border) / 0.5);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
